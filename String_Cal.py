@@ -3,6 +3,7 @@ class StringCalculator:
         if not numbers:
             return 0
 
-        parts = numbers.split(",")
+        normalized = numbers.replace('\n', ',')
+        parts = normalized.split(",")
         total = sum(int(num) for num in parts)
         return total
